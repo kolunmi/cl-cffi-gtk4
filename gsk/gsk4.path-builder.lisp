@@ -799,7 +799,7 @@ construct_path (void)
 ;;; gsk_path_builder_rel_cubic_to
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gdk_path_builder_rel_cubic_to" %path-builder-rel-cubic-to) :void
+(cffi:defcfun ("gsk_path_builder_rel_cubic_to" %path-builder-rel-cubic-to) :void
   (builder (g:boxed path-builder))
   (x1 :float)
   (y1 :float)

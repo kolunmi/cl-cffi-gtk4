@@ -274,7 +274,7 @@ lambda (dialog response)    :run-last
 ;;; gtk_native_dialog_hide
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gdk_native_dialog_hide" native-dialog-hide) :void
+(cffi:defcfun ("gtk_native_dialog_hide" native-dialog-hide) :void
  #+liber-documentation
  "@version{#2025-06-22}
   @argument[dialog]{a @class{gtk:native-dialog} object}

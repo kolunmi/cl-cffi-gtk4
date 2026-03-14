@@ -28,10 +28,10 @@
 
 (in-package :gtk-init)
 
-(eval-when (:compile-toplevel :load-toplevel :execute)
-  (defvar *warn-deprecated* t)
-  (when *warn-deprecated*
-    (pushnew :gtk-warn-deprecated *features*)))
+;; (eval-when (:compile-toplevel :load-toplevel :execute)
+;;   (defvar *warn-deprecated* t)
+;;   (when *warn-deprecated*
+;;     (pushnew :gtk-warn-deprecated *features*)))
 
 #+sbcl
 (when (and (find-package "SB-INT")
@@ -39,21 +39,21 @@
   (funcall (find-symbol "SET-FLOATING-POINT-MODES" (find-package "SB-INT"))
            :traps nil))
 
-(glib-init:at-init ()
-  (eval-when (:compile-toplevel :load-toplevel :execute)
-    (cffi:define-foreign-library gtk4
-      ((:and :unix (:not :darwin))
-       (:or "libgtk-4.so.1" "libgtk-4.so.0" "libgtk-4.so"))
-      (:darwin (:or "libgtk-4.0.dylib"
-                    "libgtk-4.dylib"
-                    "libgtk-x11-4.0.0.dylib"
-                    "libgtk-x11-4.0.dylib"))
-      (:windows (:or "libgtk-4-1.dll" "libgtk-4.dll"))
-      (t "libgtk-4-0"))
-    ;; push the hostname on *features*
-    (pushnew (intern (string-upcase (machine-instance)) :keyword) *features*)
-    (pushnew :gtk4 *features*))
-  (cffi:use-foreign-library gtk4))
+;; (glib-init:at-init ()
+;;   (eval-when (:compile-toplevel :load-toplevel :execute)
+;;     (cffi:define-foreign-library gtk4
+;;       ((:and :unix (:not :darwin))
+;;        (:or "libgtk-4.so.1" "libgtk-4.so.0" "libgtk-4.so"))
+;;       (:darwin (:or "libgtk-4.0.dylib"
+;;                     "libgtk-4.dylib"
+;;                     "libgtk-x11-4.0.0.dylib"
+;;                     "libgtk-x11-4.0.dylib"))
+;;       (:windows (:or "libgtk-4-1.dll" "libgtk-4.dll"))
+;;       (t "libgtk-4-0"))
+;;     ;; push the hostname on *features*
+;;     (pushnew (intern (string-upcase (machine-instance)) :keyword) *features*)
+;;     (pushnew :gtk4 *features*))
+;;   (cffi:use-foreign-library gtk4))
 
 (glib-init::push-library-version-features gtk
     ;; We cannot call the Lisp implementations gtk:major-version and

@@ -87,41 +87,41 @@
 ;;; gtk_shortcut_manager_add_controller
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gtk_shortcut_manager_add_controller"
-               shortcut-manager-add-controller) :void
- #+liber-documentation
- "@version{#2024-11-01}
-  @argument[manager]{a @class{gtk:shortcut-manager} object}
-  @argument[controller]{a @class{gtk:shortcut-controller} object}
-  @begin{short}
-    Adds a @class{gtk:shortcut-controller} object to be managed.
-  @end{short}
-  @see-class{gtk:shortcut-manager}
-  @see-class{gtk:shortcut-controller}"
-  (manager (g:object shortcut-manager))
-  (controller (g:object shortcut-controller)))
-
-(export 'shortcut-manager-add-controller)
+;; (cffi:defcfun ("gtk_shortcut_manager_add_controller"
+;;                shortcut-manager-add-controller) :void
+;;  #+liber-documentation
+;;  "@version{#2024-11-01}
+;;   @argument[manager]{a @class{gtk:shortcut-manager} object}
+;;   @argument[controller]{a @class{gtk:shortcut-controller} object}
+;;   @begin{short}
+;;     Adds a @class{gtk:shortcut-controller} object to be managed.
+;;   @end{short}
+;;   @see-class{gtk:shortcut-manager}
+;;   @see-class{gtk:shortcut-controller}"
+;;   (manager (g:object shortcut-manager))
+;;   (controller (g:object shortcut-controller)))
+;;
+;; (export 'shortcut-manager-add-controller)
 
 ;;; ----------------------------------------------------------------------------
 ;;; gtk_shortcut_manager_remove_controller
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gtk_shortcut_manager_remove_controller"
-               shortcut-manager-remove-controller) :void
- #+liber-documentation
- "@version{#2024-11-01}
-  @argument[manager]{a @class{gtk:shortcut-manager} object}
-  @argument[controller]{a @class{gtk:shortcut-controller} object}
-  @begin{short}
-    Remove a @class{gtk:shortcut-controller} object that had previously been
-    added.
-  @end{short}
-  @see-class{gtk:shortcut-manager}
-  @see-class{gtk:shortcut-controller}"
-  (manager (g:object shortcut-manager))
-  (controller (g:object shortcut-controller)))
-
-(export 'shortcut-manager-remove-controller)
+;; (cffi:defcfun ("gtk_shortcut_manager_remove_controller"
+;;                shortcut-manager-remove-controller) :void
+;;  #+liber-documentation
+;;  "@version{#2024-11-01}
+;;   @argument[manager]{a @class{gtk:shortcut-manager} object}
+;;   @argument[controller]{a @class{gtk:shortcut-controller} object}
+;;   @begin{short}
+;;     Remove a @class{gtk:shortcut-controller} object that had previously been
+;;     added.
+;;   @end{short}
+;;   @see-class{gtk:shortcut-manager}
+;;   @see-class{gtk:shortcut-controller}"
+;;   (manager (g:object shortcut-manager))
+;;   (controller (g:object shortcut-controller)))
+;;
+;; (export 'shortcut-manager-remove-controller)
 
 ;;; --- End of file gtk4.shortcut-manager.lisp ---------------------------------

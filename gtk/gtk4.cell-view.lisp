@@ -474,18 +474,18 @@
 ;;; ----------------------------------------------------------------------------
 
 (defun (setf cell-view-displayed-row) (path cellview)
-  (cffi:foreign-funcall "gtk_cell_view_set_display_row"
+  (cffi:foreign-funcall "gtk_cell_view_set_displayed_row"
                         (g:object cell-view) cellview
                         (g:boxed tree-path) path
                         :void)
   path)
 
-(cffi:defcfun ("gtk_cell_view_get_display_row" cell-view-displayed-row)
+(cffi:defcfun ("gtk_cell_view_get_displayed_row" cell-view-displayed-row)
     (g:boxed tree-path :return)
  #+liber-documentation
  "@version{#2024-05-20}
-  @syntax{(gtk:cell-view-display-row cellview) => path}
-  @syntax{(setf (gtk:cell-view-display-row cellview) path)}
+  @syntax{(gtk:cell-view-displayed-row cellview) => path}
+  @syntax{(setf (gtk:cell-view-displayed-row cellview) path)}
   @argument[cellview]{a @class{gtk:cell-view} widget}
   @argument[path]{a @class{gtk:tree-path} instance or @code{nil} to unset}
   @begin{short}

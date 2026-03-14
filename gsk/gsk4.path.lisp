@@ -777,7 +777,7 @@
 ;;; gsk_path_point_get_position
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gsk_path_point_position" %path-point-position) :void
+(cffi:defcfun ("gsk_path_point_get_position" %path-point-position) :void
   (point (g:boxed path-point))
   (path (g:boxed path))
   (pos (:pointer (:struct graphene:point-t))))

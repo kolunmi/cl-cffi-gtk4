@@ -1731,7 +1731,7 @@
 ;;; gdk_grab_broken_event_get_implicit
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gdk_grab_boken_event_get_implicit" grab-broken-event-implicit)
+(cffi:defcfun ("gdk_grab_broken_event_get_implicit" grab-broken-event-implicit)
     :boolean
  #+liber-documentation
  "@version{#2025-09-26}

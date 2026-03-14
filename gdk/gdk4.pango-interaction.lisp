@@ -93,7 +93,7 @@
 ;;; gdk_pango_layout_line_get_clip_region
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gdk_pango_layout_line_clip_region"
+(cffi:defcfun ("gdk_pango_layout_line_get_clip_region"
                %pango-layout-line-clip-region)
     (:pointer (:struct cairo:region-t))
   (line (g:boxed pango:layout-line))

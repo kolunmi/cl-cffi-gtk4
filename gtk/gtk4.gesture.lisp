@@ -588,7 +588,7 @@ second_gesture_begin_cb (GtkGesture       *second_gesture,
 ;;; gtk_gesture_get_point
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gtk_gesture_get-point" %gesture-point) :boolean
+(cffi:defcfun ("gtk_gesture_get_point" %gesture-point) :boolean
   (gesture (g:object gesture))
   (sequence (g:boxed gdk:event-sequence))
   (x (:pointer :double))

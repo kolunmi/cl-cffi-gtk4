@@ -217,7 +217,7 @@
 ;; TODO: This is not a complete implementation. We have to pass in an array of
 ;; G:VARIANT values
 
-(cffi:defcfun ("gtk_shortcut_action_activated" shortcut-action-activate)
+(cffi:defcfun ("gtk_shortcut_action_activate" shortcut-action-activate)
     :boolean
  #+liber-documentation
  "@version{#2025-07-27}

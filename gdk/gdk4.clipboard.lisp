@@ -315,7 +315,7 @@ lambda (clipboard)    :run-last
 ;;; gdk_clipboard_store_finish
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gdk_clipoard_store_finish" %clipboard-store-finish) :boolean
+(cffi:defcfun ("gdk_clipboard_store_finish" %clipboard-store-finish) :boolean
   (clipboard (g:object clipboard))
   (result (g:object g:async-result))
   (err :pointer))
@@ -532,7 +532,7 @@ lambda (clipboard)    :run-last
 ;;; gdk_clipboard_read_texture_finish
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gdk_clipoard_read_texture_finish"
+(cffi:defcfun ("gdk_clipboard_read_texture_finish"
                %clipboard-read-texture-finish) (g:object texture)
   (clipboard (g:object clipboard))
   (result (g:object g:async-result))
@@ -605,7 +605,7 @@ lambda (clipboard)    :run-last
 ;;; gdk_clipboard_read_text_finish
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gdk_clipoard_read_text_finish"
+(cffi:defcfun ("gdk_clipboard_read_text_finish"
                %clipboard-read-text-finish) :string
   (clipboard (g:object clipboard))
   (result (g:object g:async-result))

@@ -109,9 +109,8 @@
 ;;; GtkExpression
 ;;; ----------------------------------------------------------------------------
 
-(eval-when (:compile-toplevel :load-toplevel :execute)
-  (glib-init:at-init ()
-    (cffi:foreign-funcall "gtk_expression_get_type" :size)))
+(glib-init:at-init ()
+  (cffi:foreign-funcall "gtk_expression_get_type" :size))
 
 (cffi:define-foreign-type expression ()
   ()
@@ -765,7 +764,7 @@ this->item->name
 ;;; gtk_object_expression_get_object
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gtk_object-expression_get_object" object-expression-object)
+(cffi:defcfun ("gtk_object_expression_get_object" object-expression-object)
     g:object
  #+liber-documentation
  "@version{2025-03-14}

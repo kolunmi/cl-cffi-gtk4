@@ -4100,7 +4100,7 @@ lambda (widget)    :run-last
 ;;; gtk_widget_trigger_tooltip_query
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gtk_tooltip_trigger_tooltip_query" widget-trigger-tooltip-query)
+(cffi:defcfun ("gtk_widget_trigger_tooltip_query" widget-trigger-tooltip-query)
     :void
  #+liber-documentation
  "@version{#2025-02-13}

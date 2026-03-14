@@ -261,7 +261,7 @@
 ;;; gtk_file_launcher_launch_finish
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gtk_file_launcher_launch-finish" %file-launcher-launch-finish)
+(cffi:defcfun ("gtk_file_launcher_launch_finish" %file-launcher-launch-finish)
     :boolean
   (launcher (g:object file-launcher))
   (result (g:object g:async-result))

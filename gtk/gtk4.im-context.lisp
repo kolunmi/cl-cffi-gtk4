@@ -314,7 +314,7 @@ lambda (context)    :run-last
 ;;;
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gtk_im_context_filter-keypress" im-context-filter-keypress)
+(cffi:defcfun ("gtk_im_context_filter_keypress" im-context-filter-keypress)
     :boolean
  #+liber-documentation
  "@version{#2025-07-26}

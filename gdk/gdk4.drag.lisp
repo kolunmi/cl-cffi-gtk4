@@ -510,7 +510,7 @@ lambda (drag)    :run-last
 ;;; gdk_drag_get_drag_surface
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gdk_drag_drag_surface" drag-drag-surface) (g:object surface)
+(cffi:defcfun ("gdk_drag_get_drag_surface" drag-drag-surface) (g:object surface)
  #+liber-documentation
  "@version{#2024-01-07}
   @argument[drag]{a @class{gdk:drag} object}

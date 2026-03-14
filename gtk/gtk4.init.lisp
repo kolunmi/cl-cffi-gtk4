@@ -44,7 +44,7 @@
 (finalize-gtk-classes)
 
 ;; Initialize the GTK main loop
-(glib-init:at-init ()
-  (init))
+;; (glib-init:at-init ()
+;;   (init))
 
 ;;; --- End of file gtk4.init.lisp ---------------------------------------------

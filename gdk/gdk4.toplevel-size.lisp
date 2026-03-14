@@ -76,7 +76,7 @@
 ;;; gdk_toplevel_size_get_bounds
 ;;; ----------------------------------------------------------------------------
 
-(cffi:defcfun ("gdk_toplevel_size_bounds" %toplevel-size-bounds) :void
+(cffi:defcfun ("gdk_toplevel_size_get_bounds" %toplevel-size-bounds) :void
   (size (:pointer (:struct toplevel-size)))
   (width (:pointer :int))
   (height (:pointer :int)))
